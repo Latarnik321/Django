@@ -10,9 +10,10 @@ jobs:
         environment:
           PIPENV_VENV_IN_PROJECT: true
       - image: circleci/postgres:9.6
-        environment:          
+        environment:
           POSTGRES_USER: root
           POSTGRES_DB: circle_test
+          POSTGRES_PASSWORD: password
     steps:
       - checkout
       - python/install-packages:
